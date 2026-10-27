@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="0.153694" height="0.137807" viewBox="0 0 0.153694 0.137807" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Clip path group">
+<mask id="mask0_0_2794" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="1" height="1">
+<g id="clipPath2485">
+<path id="path2485" d="M0 0L0.0491903 0.11866C0.0841688 0.125132 0.119039 0.131604 0.153694 0.137807L0.104585 0.0194101C0.0698218 0.0129376 0.0349515 0.0064725 0 0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_0_2794)">
+<path id="path2482" d="M-7.62939e-06 -6.10352e-05L0.0491843 0.118612C0.0841628 0.125085 0.119033 0.131556 0.153688 0.137759L0.104577 0.0193623C0.0698142 0.0128898 0.0349439 0.00641146 -7.62939e-06 -6.10352e-05Z" fill="url(#paint0_radial_0_2794)"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_2794" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(35.2858 -7.09845) rotate(180) scale(40.6079 40.6105)">
+<stop stop-color="#F4F4F4"/>
+<stop offset="0.86019" stop-color="#F4F4F4"/>
+<stop offset="0.922147" stop-color="#F4F4F4"/>
+<stop offset="1" stop-color="white"/>
+</radialGradient>
+</defs>
+</svg>

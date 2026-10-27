@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="4.60702" height="4.60707" viewBox="0 0 4.60702 4.60707" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Clip path group">
+<mask id="mask0_0_1473" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="5" height="5">
+<g id="clipPath2513">
+<path id="path2513" d="M4.11821 0C4.10273 0.0226538 4.08703 0.0453083 4.07112 0.0682317L4.53854 1.19688C4.55445 1.17395 4.57015 1.1513 4.58574 1.12864L4.60702 1.13215L4.13959 0.00377273L4.11821 0ZM0.0623512 4.07525C0.0415044 4.08981 0.020739 4.1041 0 4.1184L0.00358673 4.1397H0.00366738L1.02365 4.56203L1.13215 4.60707L1.12845 4.58577C1.14911 4.57174 1.16988 4.55718 1.19072 4.54288L0.0623512 4.07525Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_0_1473)">
+<path id="path2510" d="M4.11821 0C4.10273 0.0226537 4.08703 0.0453083 4.07112 0.0682317L4.53854 1.19687C4.55445 1.17395 4.57015 1.15129 4.58574 1.12864L4.60701 1.13215L4.13959 0.00377273L4.11821 0ZM0.0623483 4.07524C0.0415014 4.08981 0.0207352 4.1041 -3.8147e-06 4.1184L0.00358291 4.1397H0.00366439L1.02365 4.56203L1.13214 4.60707L1.12845 4.58576C1.14911 4.57174 1.16987 4.55718 1.19072 4.54288L0.0623483 4.07524Z" fill="url(#paint0_radial_0_1473)"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_1473" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2.3035 2.3034) rotate(180) scale(2.3035 2.3035)">
+<stop stop-color="#C459DE"/>
+<stop offset="0.158103" stop-color="#C459DE"/>
+<stop offset="0.204294" stop-color="#C459DE"/>
+<stop offset="1" stop-color="#B346D8"/>
+</radialGradient>
+</defs>
+</svg>
