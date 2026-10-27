@@ -70,7 +70,7 @@
                                 alt="" /> Booking opens soon</span>
                     </article>
                 </div>
-                <p class="note">ⓘ   We’re getting ready for takeoff! Bookings will open soon. Stay tuned :)</p>
+                <p class="note">ⓘ   We’re getting ready for takeoff! Bookings will open soon. Stay tuned :)</p>
             </section>
             <section class="dark section">
                 <div class="intro intro-dark"><span>Thoughtfully built for what’s next</span>
@@ -109,13 +109,20 @@
                                 news,<br />straight to you</b></span></div><small>No bookings yet. Just a head start on
                         what’s coming.</small>
                 </div>
-                <form class="register-card" id="registration-form" action="mail.js" method="post">
+                
+                <!-- Updated Form ID and removed action/method -->
+                <form class="register-card" id="form">
                     <h3>Register with us.</h3>
                     <p>Be first to receive exciting travel updates!</p>
-                    <div class="form-row"><label>Full name *<input required="" minLength="2" autoComplete="name"
-                                placeholder="Your full name" name="fullName" /></label><label>Email address *<input
-                                required="" type="email" autoComplete="email" placeholder="you@example.com"
-                                name="email" /></label></div><label>Mobile number with country code *</label>
+                    <div class="form-row">
+                        <!-- Updated name/id to map to EmailJS fields -->
+                        <label>Full name *<input required="" minLength="2" autoComplete="name"
+                                placeholder="Your full name" name="name" id="name" /></label>
+                        <label>Email address *<input required="" type="email" autoComplete="email"
+                                placeholder="you@example.com" name="email" id="email" /></label>
+                    </div>
+
+                    <label>Mobile number with country code *</label>
                     <div class="phone-field"><select name="countryCode" aria-label="Country code">
                             <option value="+91" selected="">🇮🇳 +91</option>
                             <option value="+1">🇺🇸 +1</option>
@@ -123,20 +130,26 @@
                             <option value="+61">🇦🇺 +61</option>
                             <option value="+65">🇸🇬 +65</option>
                             <option value="+971">🇦🇪 +971</option>
-                        </select><input required="" type="tel" inputMode="numeric" pattern="[0-9]{7,15}"
-                            autoComplete="tel-national" placeholder="Mobile number" name="mobile" /></div>
+                        </select>
+                        <!-- Updated name/id to Phone_field -->
+                        <input required="" type="tel" inputMode="numeric" pattern="[0-9]{7,15}"
+                            autoComplete="tel-national" placeholder="Mobile number" name="Phone_field" id="Phone_field" /></div>
                     <fieldset class="interest-field">
-                        <legend>Travel interests (optional)</legend><label><input type="checkbox" name="interests"
-                                value="Beaches" /><span>Beaches</span></label><label><input type="checkbox"
-                                name="interests" value="Mountains" /><span>Mountains</span></label><label><input
-                                type="checkbox" name="interests"
-                                value="Culture" /><span>Culture</span></label><label><input type="checkbox"
-                                name="interests" value="International" /><span>International</span></label>
-                    </fieldset><label class="consent"><input type="checkbox" required="" name="consent" /> I agree to
-                        the Privacy Policy and to receive launch updates and selected travel
-                        communications.</label><input class="bot-field" tabindex="-1" autoComplete="off"
-                        name="company" /><button class="gold-btn submit">Register for Launch Offers</button><small>Your
-                        information will be used for launch updates and selected travel communications.</small>
+                        <legend>Travel interests (optional)</legend>
+                        <label><input type="checkbox" name="interests" value="Beaches" /><span>Beaches</span></label>
+                        <label><input type="checkbox" name="interests"
+                                value="Mountains" /><span>Mountains</span></label>
+                        <label><input type="checkbox" name="interests" value="Culture" /><span>Culture</span></label>
+                        <label><input type="checkbox" name="interests"
+                                value="International" /><span>International</span></label>
+                    </fieldset>
+                    <label class="consent"><input type="checkbox" required="" name="consent" /> I agree to the Privacy
+                        Policy and to receive launch updates and selected travel communications.</label><input
+                        class="bot-field" tabindex="-1" autoComplete="off" name="company" />
+                        
+                        <!-- Updated button to an input submit mapped to ID -->
+                        <input type="submit" id="button" class="gold-btn submit" value="Register for Launch Offers" />
+                        <small>Your information will be used for launch updates and selected travel communications.</small>
                 </form>
             </section>
             <section class="dark section">
@@ -265,6 +278,29 @@
         </main><!--$--><!--/$-->
     </div>
     <script src="app.js"></script>
+
+    <!-- EmailJS Scripts and Submission Logic -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('qTAKMcdWEsdS68fQ6');
+
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const btn = document.getElementById('button');
+            btn.value = 'Sending...';
+
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS configurations
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(() => {
+                    btn.value = 'Register for Launch Offers';
+                    alert('Registration submitted successfully!');
+                    this.reset();
+                }, (err) => {
+                    btn.value = 'Register for Launch Offers';
+                    alert('Failed to submit form: ' + JSON.stringify(err));
+                });
+        });
+    </script>
 </body>
 
 </html>
